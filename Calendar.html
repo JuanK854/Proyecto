@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Master</title>
+    <meta name="aplicatoin"
+        content="Pagina para la administracion y gestion tanto del tiempo como de tareas y proyectos" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a href="#contenido" class="skip-link">Saltar contenido</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="brand" aria-label="Ir al inicio">
+                <span class="brand-mark" aria-hidden="true">TM</span>
+                <span class="brand-name">Time master</span>
+            </a>
+            <nav class="nav" aria-label="Navegacion principal">
+                <a href="Pomodoro.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg> Pomodoro</a>
+                <a href="Calendar.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1" stroke="currentColor" class="size-16">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                    </svg> Calendario</a>
+                <a href="Habits.html"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                    </svg>
+                    Hábitos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section class="event-logger" aria-label="registrar evento">
+            <!-- Columna izquierda: Formulario y eventos -->
+            <div class="event-logger-container">
+                <h1 id="event-logger-title">Registrar Evento</h1>
+                <form id="event-form">
+                    <label for="event-title">Título</label>
+                    <input type="text" id="event-title" name="event-title" placeholder="Nombre del evento" required />
+
+                    <label for="event-description">Descripción</label>
+                    <textarea id="event-description" name="event-description" placeholder="Detalles del evento"
+                        rows="4"></textarea>
+
+                    <label for="event-date">Fecha Seleccionada</label>
+                    <p class="selected-date">16 de enero, 2026</p>
+
+                    <button type="submit" class="btn"> Añadir Evento </button>
+                </form>
+
+                <div class="event-list" aria-label="lista de evento">
+                    <h2 id="current-event">Eventos del 16 de enero</h2>
+                    <article class="card">
+                        <h3 id="title-event">Exposicion de proyecto</h3>
+                        <p id="text-event">
+                            Presentacion del proyecto realizado durante las clases, para la evaluacion final del modulo.
+                        </p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Columna derecha: Calendario -->
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h2>Enero 2026</h2>
+                </div>
+                <table class="calendar">
+                    <thead>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mié</th>
+                            <th>Jue</th>
+                            <th>Vie</th>
+                            <th>Sáb</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="other-month">28</td>
+                            <td class="other-month">29</td>
+                            <td class="other-month">30</td>
+                            <td class="other-month">31</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td class="today">16</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site footer">
+        <div class="container footer-inner">
+            <p>&copy; 2024 Time Master. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
